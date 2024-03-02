@@ -7,4 +7,4 @@ def hello(request):
     return HttpResponse("Hola Mundo!")
 
 def about(request):
-    return HttpResponse("Somos programadores!")
+    return HttpResponse("Somos programadores!!!")
