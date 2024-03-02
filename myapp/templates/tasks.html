@@ -1,3 +1,6 @@
+{% extends 'layouts/base.html' %}
+
+{% block content %}
 <h1>Tareas</h1>
 {% for task in tasks %}
 <ul>
@@ -16,3 +19,4 @@
                 </li>
 </ul>
 {% endfor %}
+{% endblock %}
