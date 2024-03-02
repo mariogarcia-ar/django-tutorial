@@ -143,3 +143,5 @@ python manage.py createsuperuser
 
 Add Project and task editing myapp/admin.py
 Now you and navigate to http://127.0.0.1:8000/admin/myapp/project/
+
+# Templates
