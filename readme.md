@@ -64,3 +64,13 @@ For django:
  - django_content_type
  - django_migrations
  - django_session
+
+ ## migrations for an specific app
+Add a class into myapp/models.py.
+Add the app to the project using the mysite/settings.py in the section INSTALLED_APPS adding myapp and running :
+
+```bash
+python manage.py makemigrations myapp
+python manage.py migrate myapp
+```    
+We've created myapp_project table. 
