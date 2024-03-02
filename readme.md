@@ -33,3 +33,11 @@ python manage.py startapp blog
 python manage.py startapp store
 python manage.py startapp task
 ```
+
+Folders
+ - myapp
+    - admin.py: for admin panel
+    - apps.py: apps configuration
+    - models.py: orm tables  write on migrations
+    - test.py: 
+    - views.py: views to the user
