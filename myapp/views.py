@@ -1,6 +1,6 @@
 # from django.shortcuts import render
 from django.http import HttpResponse, JsonResponse
-from django.shortcuts import get_list_or_404, render
+from django.shortcuts import get_list_or_404, render, redirect
 
 from .models import Project, Task
 from .forms import CreateNewTask, CreateNewProject
@@ -27,6 +27,8 @@ def projects(request):
 def create_project(request):
     if request.method == 'POST':
         Project.objects.create(name=request.POST['name'])
+        return redirect('projects')
+
     return render(request, "projects/create_project.html",{
         'form': CreateNewProject()
     })
@@ -42,6 +44,8 @@ def create_task(request):
         Task.objects.create(title=request.POST['title'], 
                             description=request.POST['description'],
                             project_id = 1)
+        return redirect('tasks')
+        
     return render(request, "tasks/create_task.html",{
         'form': CreateNewTask()
     })

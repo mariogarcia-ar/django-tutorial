@@ -148,3 +148,7 @@ Now you and navigate to http://127.0.0.1:8000/admin/myapp/project/
 Django use Jinja like a template enginee https://jinja.palletsprojects.com/en/3.1.x/ 
 
 # Navigation
+
+# Forms
+
+# Url names
