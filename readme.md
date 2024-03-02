@@ -41,3 +41,4 @@ Folders
     - models.py: orm tables  write on migrations
     - test.py: 
     - views.py: views to the user
+    - urls.py: routing inside the app
