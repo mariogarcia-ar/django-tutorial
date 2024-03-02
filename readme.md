@@ -79,3 +79,52 @@ python manage.py makemigrations myapp
 python manage.py migrate myapp
 ```    
 We've created myapp_project table. 
+
+# Shell
+
+```bash
+python manage.py shell
+```   
+
+```python
+from myapp.models import Project, Task
+
+# create a project
+p = Project(name="application movil")
+p.save()
+
+p = Project(name="application web")
+p.save()
+
+# list projects
+Project.objects.all()
+
+# find by id
+Project.objects.get(id=2)
+# find by name
+Project.objects.get(name="application movil")
+
+```   
+
+```python
+from myapp.models import Project, Task
+
+# find by id
+p = Project.objects.get(id=2)
+
+# create a task
+t = Task(title="tarea 1", description="una tarea", project=p)
+t.save()
+
+# list all task for a project
+p.task_set.all()
+
+# other way
+p.task_set.create(title="tarea 2", description="otro tarea")
+
+# get a task from a project
+p.task_set.get(id=1)
+
+# usign filters
+Project.objects.filter(name__startswith="appli")
+```   
