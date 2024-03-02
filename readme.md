@@ -128,3 +128,5 @@ p.task_set.get(id=1)
 # usign filters
 Project.objects.filter(name__startswith="appli")
 ```   
+
+# Params
