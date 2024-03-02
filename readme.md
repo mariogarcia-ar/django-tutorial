@@ -2,6 +2,11 @@
 ```bash
 pip install django
 ```
+Installing a specific version
+
+```bash
+pip install Django==4.2
+```
 
 ## check installation
 ```bash
