@@ -42,3 +42,25 @@ Folders
     - test.py: 
     - views.py: views to the user
     - urls.py: routing inside the app
+
+## migrations
+
+```bash
+python manage.py makemigrations
+python manage.py migrate
+```    
+Create the folling tables:
+
+For Authentication:
+ - auth_group
+ - auth_group_permissions
+ - auth_permission
+ - auth_user
+ - auth_user_groups
+ - auth_user_user_permissions
+
+For django: 
+ - django_admin_log
+ - django_content_type
+ - django_migrations
+ - django_session
