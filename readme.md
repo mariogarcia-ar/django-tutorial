@@ -130,3 +130,15 @@ Project.objects.filter(name__startswith="appli")
 ```   
 
 # Params
+
+
+# Admin Panel
+Go to  http://127.0.0.1:8000/admin/ 
+
+
+Create a super user
+```bash
+python manage.py createsuperuser
+```   
+
+Add Project and task editing myapp/admin.py
