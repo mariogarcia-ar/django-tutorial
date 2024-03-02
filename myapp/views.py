@@ -6,7 +6,10 @@ from django.shortcuts import get_list_or_404, render
 # Create your views here.
 
 def index(request):
-    return render(request, "index.html")
+    title = "Hola Mundo!"
+    return render(request, "index.html", {
+        'title': title
+    })
 
 def hello(request, username):
     return HttpResponse(f"Hola Mundo! {username}")
@@ -15,17 +18,16 @@ def about(request):
     return render(request, "about.html")
 
 def projects(request):
-    # projects = list(Project.objects.values())
-    # # return HttpResponse("projectos")
-    # return JsonResponse(projects, safe=False)
-    return render(request, "projects.html")
+    projects = Project.objects.all()
+    return render(request, "projects.html",{
+        'projects': projects
+    })
 
 
-def tasks(request, id):
-    # return HttpResponse("tareas")
-    # task = Task.objects.get(id=id)
-    # task = get_list_or_404(Task, id=id)
-    # return JsonResponse(task, safe=False)
-    return render(request, "tasks.html")
+def tasks(request):
+    tasks = Task.objects.all()
+    return render(request, "tasks.html",{
+        'tasks': tasks
+    })
 
     
